@@ -1,4 +1,4 @@
-package org.example.models;
+package airport.uml_v1.model;
 
 public class Departure {
     private String flightNumber;

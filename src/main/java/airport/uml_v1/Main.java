@@ -1,6 +1,7 @@
-package org.example;
+package airport.uml_v1;
 
-import org.example.models.*;
+
+import airport.uml_v1.model.*;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
