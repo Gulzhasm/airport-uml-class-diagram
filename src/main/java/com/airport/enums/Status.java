@@ -1,4 +1,4 @@
-package airport.uml_v2.model;
+package com.airport.enums;
 
 public enum Status {
     BOARDING("Boarding"),
