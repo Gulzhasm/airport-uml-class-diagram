@@ -4,22 +4,26 @@ package com.airport.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
 
 
 @AllArgsConstructor
 @Entity
 @NoArgsConstructor
-@Getter
-@Setter
-@Table(name = "airport")
+@Data
+@Table(name = "airports")
 public class Airport extends BaseEntity {
 
     private String airportCode;
     private String airportName;
     private String location;
-    @ManyToOne
-    @JoinColumn(name = "flights_id")
-    private Flights flights_id;
+
+    @OneToMany(mappedBy = "airport",fetch = FetchType.LAZY)
+    private List<Arrival> arrivals;
+
+    @OneToMany(mappedBy = "airport",fetch = FetchType.LAZY)
+    private List<Departure> departures;
+
 
     public Airport(String airportCode){
         this.airportCode = airportCode;

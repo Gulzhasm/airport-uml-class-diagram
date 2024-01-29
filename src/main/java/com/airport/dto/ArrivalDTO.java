@@ -17,7 +17,6 @@ public class ArrivalDTO {
     private String flightNumber;
     private String origin;
 
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDateTime scheduledDateAndTime;
     private String gate;
     private Status status;
