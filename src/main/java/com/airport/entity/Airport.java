@@ -13,6 +13,11 @@ import java.util.List;
 @Data
 @Table(name = "airports")
 public class Airport extends BaseEntity {
+    public Airport(String airportCode, String airportName, String location) {
+        this.airportCode = airportCode;
+        this.airportName = airportName;
+        this.location = location;
+    }
 
     private String airportCode;
     private String airportName;
@@ -25,7 +30,5 @@ public class Airport extends BaseEntity {
     private List<Departure> departures;
 
 
-    public Airport(String airportCode){
-        this.airportCode = airportCode;
-    }
+
 }
